@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2>Creación y envío de formularios desde el DOM</h2>
+        </header>
+        <p>
+            Este ejemplo muestra como crear un formulario en tiempo de ejecución y realiza el envío a una url pasada por parámetro pasados 1 segundo
+        </p>
+
+        <h2>Resultado</h2>
+        
+        
+        <script type="text/javascript" src="./sendForm.js"></script>
+        <script type="text/javascript">
+            setTimeout(function(){
+                new SendFormTo("./getData.php", [
+                    { 
+                        "type": "number",
+                        "class": "input-frm", 
+                        "id": "idPersona",
+                        "value": "1001" 
+                    },{ 
+                        "type": "checkbox",
+                        "class": "input-frm", 
+                        "id": "enParo",
+                        "value": "on",
+                        "checked": true
+                    }
+                ]);
+            }, 1000);
+        </script>
+    </body>
+</html>

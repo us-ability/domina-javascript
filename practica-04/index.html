@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2>Detectar si el dispositivo es móvil o de escritorio</h2>
+        </header>
+        <p>
+            Este ejemplo intenta averigüar si el dispositivo dónde se ejecuta es de tipo móvil o de escritorio 
+        </p>
+
+        <h2>Resultado</h2>
+        <div class="result"></div>
+        
+        <script type="text/javascript" src="./isMobile.js"></script>
+        <script type="text/javascript">
+            function checkMode(){
+                var div = document.querySelector(".result");
+                document.querySelector(".result").innerHTML = isMobile() ? "El dispositivo es móvil" : "El dispositivo es de escritorio";;
+            }
+
+            // Añadimos los eventos de onload y onresize
+            window.addEventListener("load", function(){
+                checkMode();
+            });
+
+            window.addEventListener("resize", function(){
+                checkMode()
+            });
+            
+        </script>
+    </body>
+</html>

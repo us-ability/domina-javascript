@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <h2>Sistema criptográfico de clave pública RSA</h2>
+        </header>
+        <p>
+            Este es un ejemplo de cómo crear un algoritmo que sea capaz de encriptar un texto de cualquier clase en base a una clave pública y desencriptarlo en base a una clave privada.
+        </p>
+
+        <h2>Introduce un texto</h2>
+        <textarea id="text" rows="4" >Esto es una prueba del encriptador de cadenas RSA.</textarea>
+        <button onclick="encrypt()">Encriptar</button>
+        <button onclick="decrypt()">Desencriptar</button>
+
+        <h2>Resultado tras encriptación</h2>
+        <div class="result-encrypt"></div>
+
+        <h2>Resultado tras decriptación</h2>
+        <div class="result-decrypt"></div>
+        
+        <script type="text/javascript" src="./bigInteger.min.js"></script>
+        <script type="text/javascript" src="./rsa-algorithm.js"></script>
+        <script type="text/javascript">
+            function encrypt(){
+                document.querySelector(".result-encrypt").innerHTML = r.encrypt(document.getElementById("text").value);
+            }
+
+            function decrypt(){
+                document.querySelector(".result-decrypt").innerHTML = r.decrypt(document.querySelector(".result-encrypt").innerHTML);
+            }
+            var r = new RSA(419,17);
+            encrypt();
+            decrypt();
+        </script>
+    </body>
+</html>

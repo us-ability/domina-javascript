@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./styles.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2>Librería Charts: Gráfico de líneas con canvas</h2>
+        </header>
+        <p>
+            Este es un ejemplo de cómo Crear un componente de JavaScript capaz de realizar gráficos de líneas.
+        </p>
+
+        <canvas id="e1"></canvas>
+        <canvas id="e2"></canvas>
+
+        <script type="text/javascript" src="../practice-18/barChart.js"></script>
+        <script type="text/javascript" src="./lineChart.js"></script>
+        <script type="text/javascript">
+            var data1 = { 
+                "Enero": 100, "Febrero": 150, "Marzo": 72,
+                "Abril": 300, "Mayo": 20, "Junio": 120 
+            };
+
+            Charts("#e1").LineChart({
+                title:{
+                    value: "Gastos mensuales en ocio", 
+                    position: 'top', 
+                    color: '#333'
+                },
+                gridColor:"#ddd",
+                data:data1,
+                colors:["#3783b9","#7b37b9"],
+                style: {width: "calc(100% - 10px)", height: "250px"},
+                legend: false
+            });
+        
+            var data2 = [
+                { 
+                    name: "2018", 
+                    values: {
+                        "Enero": 80, "Febrero": 120, "Marzo": 90,
+                        "Abril": 220, "Mayo": 50, "Junio": 180 
+                    },
+                },
+                { 
+                    name: "2019", 
+                    values: {
+                        "Enero": 100, "Febrero": 150, "Marzo": 72,
+                        "Abril": 300, "Mayo": 20, "Junio": 120 
+                    },
+                }
+            ];
+
+            Charts("#e2").LineChart({
+                title:{value: "Gastos mensuales en ocio", position: 'top', color: '#333'},
+                gridColor:"#ddd",
+                data:data2,
+                colors:["#3783b9","#7b37b9"],
+                style: {width: "calc(100% - 10px)", height: "250px"},
+                legend: true
+            });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<style>
+    nav {
+        background: #f0f0f0;
+        border: 1px solid rgba(0,0,0,0.2);
+        color: #333;
+        font-size: 1rem;
+        margin: 0;
+        padding: 0 15px;
+        box-sizing: border-box;
+        width: 100%;
+        display: block;
+        margin-top: 5px;
+    }
+
+    nav h2 {
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    nav article{
+        display: inline-block;
+    }
+
+    nav article header{
+        background: #f0f0f0;
+        color: #333;
+    }
+
+    nav .button{
+        display: none;
+    }
+
+    nav .menu{
+        display: inline-block;
+        width: auto;
+        width: calc(100% - 132px);
+        text-align: right;
+    }
+
+    nav .menu a {
+        color: #666;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<article class="nav-header">
+    <header class="nav-title">
+        <h2>NavBar1.0</h2>
+    </header>
+</article>
+<div class="button">
+    <input type="checkbox" id="nav-status">
+    <label for="nav-status">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+</div>
+
+<div class="menu">
+    <a href="https://github.com/us-ability/" target="_blank">Github</a>
+    <a href="https://es.linkedin.com/" target="_blank">LinkedIn</a>
+    <a href="https://codepen.io/" target="_blank">Codepen</a>
+</div>

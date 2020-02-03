@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2>Diseño de botones de tipo interruptor</h2>
+        </header>
+        <p>
+            Este ejemplo muestra cómo crear un botón de tipo interruptor o switch
+        </p>
+
+        <h2>Resultado</h2>
+        <label id="student">¿Estudias?</label>
+        
+        <script type="text/javascript" src="./toggle-switch.js"></script>
+        <script type="text/javascript">
+            toggleSwitch('label').set({
+                textOn: "Sí", 
+                textOff: "No", 
+                width: "80px"
+            });
+        </script>
+    </body>
+</html>

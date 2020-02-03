@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <h2>Autocomplete sencillo</h2>
+        </header>
+        <p>
+            Este es un ejemplo de cómo crear un autocomplete de manera sencilla y minimalista
+        </p>
+
+        <div class="datalist">
+            <label for="provinces">
+                Provincia
+                <input id="provinces" name="provinces" type="text" />
+            </label>
+        
+            <select name="provincia" style="display:none">
+                <option value="15">A coruña</option>
+                <option value="1">Álava</option>
+                <option value="2">Albacete</option>
+                <option value="3">Alicante</option>
+                <option value="4">Almería</option>
+                <option value="33">Asturias</option>
+                <option value="5">Ávila</option>
+                <option value="6">Badajoz</option>
+                <option value="7">Baleares</option>
+                <option value="8">Barcelona</option>
+                <option value="9">Burgos</option>
+                <option value="10">Cáceres</option>
+                <option value="11">Cádiz</option>
+                <option value="39">Cantabria</option>
+                <option value="12">Castellón</option>
+                <option value="51">Ceuta</option>
+                <option value="13">Ciudad Real</option>
+                <option value="14">Córdoba</option>
+                <option value="16">Cuenca</option>
+                <option value="99">Extranjero</option>
+                <option value="17">Girona</option>
+                <option value="18">Granada</option>
+                <option value="19">Guadalajara</option>
+                <option value="20">Guipúzcoa</option>
+                <option value="21">Huelva</option>
+                <option value="22">Huesca</option>
+                <option value="23">Jaén</option>
+                <option value="26">La rioja</option>
+                <option value="35">Las palmas</option>
+                <option value="24">León</option>
+                <option value="25">Lleida</option>
+                <option value="27">Lugo</option>
+                <option value="28" selected>Madrid</option>
+                <option value="29">Málaga</option>
+                <option value="52">Melilla</option>
+                <option value="30">Murcia</option>
+                <option value="31">Navarra</option>
+                <option value="32">Ourense</option>
+                <option value="34">Palencia</option>
+                <option value="36">Pontevedra</option>
+                <option value="37">Salamanca</option>
+                <option value="38">Santa cruz de tenerife</option>
+                <option value="40">Segovia</option>
+                <option value="41">Sevilla</option>
+                <option value="42">Soria</option>
+                <option value="43">Tarragona</option>
+                <option value="44">Teruel</option>
+                <option value="45">Toledo</option>
+                <option value="46">Valencia</option>
+                <option value="47">Valladolid</option>
+                <option value="48">Vizcaya</option>
+                <option value="49">Zamora</option>
+                <option value="50">Zaragoza</option>
+            </select>
+        </div>
+            
+        <script type="text/javascript" src="./autocomplete.js"></script>
+        <script type="text/javascript">
+            document.getElementById("provinces").datalist();
+        </script>
+    </body>
+</html>

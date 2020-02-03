@@ -1,0 +1,196 @@
+* { 
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+    padding: 17px 15px;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+}
+
+header h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-variant: small-caps;
+}
+
+html{ padding: 8px;}
+
+p{ margin: 15px 0; font-size: 1.6rem;  }
+
+.nav-tabs {
+    padding: 0px;
+    /*border: 2px solid rgba(0,0,0,0.2);*/
+    border-bottom: 0 none;
+}
+.nav-tabs > li {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0 none;
+    -o-border-radius: 4px 4px 0 0;
+    -ms-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    margin-right: 2px;
+    padding: 0 !important;
+}
+
+.nav-tabs > li:not(.active) {
+    border: 0 none;
+}
+
+.nav-tabs > li.active a {
+    background: #ffffff;
+    -o-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 40px;
+}
+
+.nav-tabs > li:not(.active) a {
+    position: relative;
+    top: 10px;
+}
+
+.nav-tabs > li a {
+    font-weight: 400;
+    padding: 5px 10px;
+}
+
+.nav-tabs > li a,
+.nav-tabs>li>a,
+.nav-tabs>li>a:focus,
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background: #01459c;
+    -o-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    font-weight: 600;
+    color: #000000;
+}
+
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    -o-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.nav-tabs>li>a:focus,
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.nav-tabs + .tab-content,
+.nav-tabs-overflow + .tab-content {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    padding: 5px;
+}
+
+.nav-tabs-overflow + .tab-content {
+    margin-top: -1px;
+}
+
+.nav-tabs-overflow + .tab-content h2{
+    font-size: 16px;
+}
+
+.nav-tabs-overflow {
+    overflow: hidden;
+    height: 40px;
+    position: relative;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.nav-tabs-overflow ul {
+    position: relative;
+    z-index: 0;
+}
+
+.nav-tabs-overflow .nav-prev,
+.nav-tabs-overflow .nav-next {
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    line-height: 44px;
+    width: 20px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.nav-tabs-overflow i.nav-prev::before,
+.nav-tabs-overflow i.nav-next::before {
+    border-style: solid;
+    border-width: 8px 8px 8px 0;
+    border-left-color: transparent;
+    border-right-color: black;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    position: relative;
+    top: calc(50% - 8px);
+    left: calc(50% - 4px);
+}
+
+.nav-tabs-overflow i.nav-next::before {
+    border-width: 8px 0px 8px 8px;
+    border-left-color: black;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.nav-tabs-overflow .nav-next {
+    left: auto;
+    right: 0;
+}
+
+.nav-tabs-overflow .nav-prev:hover::before,
+.nav-tabs-overflow .nav-prev:focus::before,
+.nav-tabs-overflow .nav-prev:active::before{
+    border-right-color:  #01459c;
+    cursor: pointer;
+}
+
+.nav-tabs-overflow .nav-next:hover::before,
+.nav-tabs-overflow .nav-next:focus::before,
+.nav-tabs-overflow .nav-next:active::before{
+    border-left-color:  #01459c;
+    cursor: pointer;
+}

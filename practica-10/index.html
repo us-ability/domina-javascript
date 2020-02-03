@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2>Polyfill KeyboardEvent para Internet Explorer 11</h2>
+        </header>
+        <p>
+            Este ejemplo implementa un método que Internet Explorer 11 no tiene
+        </p>
+
+        <h2>Resultado</h2>
+        <input type="text" name="inputText" id="inputText" style="display: none" />
+        <div class="result"></div>
+        
+        <script type="text/javascript" src="./keyboardEvent.js"></script>
+        <script type="text/javascript">
+            // Definimos un evento keydown antes para ver que lo recibe
+            document.getElementById('inputText').onkeydown=function(e){
+                console.log(e);
+
+                for(var param in e){
+                    var div = document.createElement("div");
+                    div.innerHTML = param + " = " + e[param];
+
+                    document.querySelector(".result").appendChild(div);
+                }
+
+                return;
+            }
+
+            var evt = new KeyboardEvent('keydown', {
+                key: "1",
+                location: 3
+            });
+
+            document.querySelector('input').dispatchEvent (evt);
+        </script>
+    </body>
+</html>

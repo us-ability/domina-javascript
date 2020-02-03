@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2>Recuperar los parámetros pasados por URL</h2>
+        </header>
+        <p>
+            Esto es una prueba de recuperación de los parámetros recibidos por la URL
+        </p>
+
+        <h2>Parámetros recibidos:</h2>
+        <div class="parameters"></div>
+        
+        <script type="text/javascript" src="./getParameters.js"></script>
+        <script type="text/javascript">
+            var params = getParameters();
+            for(var param in params){
+                var div = document.createElement("div");
+                div.innerHTML = param + " = " + params[param];
+
+                document.querySelector(".parameters").appendChild(div);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2>Algotitmo de sustitución simple</h2>
+        </header>
+        <p>
+            Este ejemplo crea un algoritmo de sustitución sencillo para codificar cadenas 
+        </p>
+
+        <h2>Resultado tras encriptación</h2>
+        <div class="result-encrypt"></div>
+
+        <h2>Resultado tras decriptación</h2>
+        <div class="result-decrypt"></div>
+        
+        <script type="text/javascript" src="./simple-encrypter.js"></script>
+        <script type="text/javascript">
+            var enc = document.querySelector(".result-encrypt");
+                enc.innerHTML = "Encriptador de cadenas sencillo".encrypt();
+
+            var dec = document.querySelector(".result-decrypt")
+                dec.innerHTML = enc.innerHTML.decrypt();
+
+        </script>
+    </body>
+</html>

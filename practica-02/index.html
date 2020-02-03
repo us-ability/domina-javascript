@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2>Inclusión dinámica desde archivos html</h2>
+        </header>
+
+        <nav></nav>
+        <p>
+            Se ha importado el archivo cabecera.hrml al documento actual
+        </p>
+
+        <script type="text/javascript" src="./includeFromHTML.js"></script>
+        <script type="text/javascript">
+            includeFromHTML('nav', './cabecera.html');
+        </script>
+    </body>
+</html>

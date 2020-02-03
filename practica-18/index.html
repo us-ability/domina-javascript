@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./styles.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2>Librería Charts: Gráfico de barras con canvas</h2>
+        </header>
+        <p>
+            Este es un ejemplo de cómo Crear un componente de JavaScript capaz de realizar gráficos de barras.
+        </p>
+
+        <canvas id="chorizontal"></canvas>
+        <canvas id="cvertical"></canvas>
+
+        <script type="text/javascript" src="./barChart.js"></script>
+        <script type="text/javascript">
+            var data = { 
+                "Internet": 100, "Comida": 150, "Creditos": 72,
+                "Hipoteca": 300, "Ocio": 20, "Seguros": 120 
+            };
+
+            Charts("#chorizontal").BarChart({
+                title:{value: "Gastos mes", position: 'top', color: '#333'},
+                gridColor:"#ddd",
+                data:data,
+                colors:["#c345a2","#a12345", "#036","#069", "#09c", "#45c3a3"],
+                style: {width: "calc(100% - 10px)", height: "250px"},
+            });
+
+            Charts("#cvertical").BarChart({
+                title:{value: "Gastos mes", position: 'top', color: '#333'},
+                gridColor:"#ddd",
+                data:data,
+                direction: "horizontal",
+                colors:["#c345a2","#a12345", "#036","#069", "#09c", "#45c3a3"],
+                style: {width: "calc(100% - 10px)", height: "250px"},
+            });
+        </script>
+    </body>
+</html>

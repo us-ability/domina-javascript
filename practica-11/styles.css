@@ -1,0 +1,90 @@
+* { 
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-variant: small-caps;
+}
+
+.popup-overlay {
+    background: rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+}
+.popup {
+    width: 90%;
+    margin: 10% auto;
+    border: 1px solid rgba(0,0,0,0.2);
+    background: #ffffff;
+    padding: 10px;
+}
+.popup .popup-header {
+    height: 48px;
+    width: 100%;
+    position: relative;
+}
+.popup .popup-header h2 {
+    background: #384a74;
+    color: #ffffff;
+    height: auto;
+    padding: 0 5px;
+    line-height: 36px;
+    margin: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.popup a.popup-close {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    font-size: 24px;
+    font-family: Arial;
+    width: 32px;
+    text-align: center;
+    height: 32px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.popup-footer {
+    border-top: 1px solid rgba(0,0,0,0.2);
+    padding: 5px 0;
+    display: block;
+    width: 100%;
+    height: 32px;
+}
+.popup-footer button {
+    background: #384a74;
+    color: #ffffff;
+    float: right;
+    border: 0 none;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+}

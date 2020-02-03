@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <h2>Carga asíncrona de scripts</h2>
+        </header>
+        <p>
+            Este es un ejemplo de cómo crear un sistema para poder cargar una lista de scripts de forma asíncro-na en un orden preestablecido.
+        </p>
+        
+        <script type="text/javascript" src="./async-load.js"></script>
+        <script type="text/javascript">
+            var array = [
+                {id:2, src:'./js/bootstrap.min.js', dependencies:'1' },
+                {id:7, src:'./js/isiTools.min.js'},
+                {id:5, src:'./js/isiToolsHelper_ES.min.js', dependencies:'7'},
+                {id:8, src:'./js/custom.js', dependencies:'1,2,7' },
+                {id:1, src:'./js/jquery-3.2.1.min.js' },
+            ];
+
+            AsyncLoad(array, function(){ 
+                console.log('Carga a través de AsyncLoad finalizada...'); 
+                console.log(AsyncLoad.loadedFiles)
+                // Resto de código ...
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./styles.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <h2>Chatbot FAQ</h2>
+        </header>
+        <p>
+            Este es un ejemplo de cómo crear un componente de JavaScript que tenga una base de conocimiento para guiar a un usuario cuando pregunta algo. Si no dispone del conocimiento, deberá contestar que no dispone de datos.
+        </p>
+
+        <div id="Chatbot"></div>
+
+        <script type="text/javascript" src="./chatbot.js"></script>
+        <script type="text/javascript">
+            Chatbot.title = "JSChatbot FAQ";
+            Chatbot.database.data = [
+                {question: "¿Qué es JavaScript?", response: 'JavaScript es un lenguaje de secuencias de comandos del lado del cliente y del servidor que se puede insertar en páginas HTML y que los navegadores web entienden. JavaScript también es un lenguaje de programación basado en objetos'},
+                {question: "¿Cuáles son los tipos de datos JavaScript?", response: 'Los tipos de datos de los que dispone JavaScript son Number, String, Boolean, Object y Undefined'},
+                {question: "¿Para qué sirve la función isNaN?", response: 'La función isNan devuelve verdadero o falso en función de si el argumento es o no un número.'},
+                {question: "¿Es posible definir una cadena en varias líneas?", response: 'La definición de cadenas multilínea puede realizarse a través de la barra diagonal invertida (\\) o a través del acento grave francés (`)'},
+                {question: "¿Qué compañía desarrolló JavaScript?", response: 'La compañía de software que desarrolló JavaScript fue Netscape.'},
+                {question: "A qué se refiere la palabra reservada 'this' en JavaScript?", response: 'La palabra reservada this es un elemento que hace referencia al objeto desde el cual se llamó.'},
+                {question: "¿Qué símbolos se usan para comentar código en Javascript?", response: 'Es posible hacerlo a través de dos formas. Si se desea comentar desde la posición actual hasta el final de línea podemos utilizar //. Si se desea comentar en bloque podemos utilizar /* para abrir bloque de comentario y  */ para cerrar el bloque de comentarios'},
+                {question: "¿Para qué sirve el operador ===?", response: 'El operador de igualdad estricta devuelve verdadero cuando ambos operandos tienen el mismo valor y tipo.'},
+                {question: '¿Cuál sería el resultado de 1 + 2 + "3"?', response: 'Dado que 1 y 2 son enteros, pero 3 es un String, el resultado sería 33. Primero suma los números y luego concatena la cadena "3".'},
+                {question: "¿De qué sirve void(0)?", response: 'Se puede usar para crear una expresión de enlace en el atributo href de un enlace de hipertexto, pero sin conllevar la recarga de la página. También se puede utilizar para llamar a otro método sin recargar la página.'},
+            ];
+
+            Chatbot.iconBot = "./img/borg-head.png";
+            Chatbot.iconUser = "./img/user-male--v1.png";
+
+            Chatbot.init('#Chatbot');
+        </script>
+    </body>
+</html>

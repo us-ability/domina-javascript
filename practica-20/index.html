@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./styles.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2>Tablero Agile con CSS y JavaScript</h2>
+        </header>
+        <p>
+            Este es un ejemplo de cómo crear un tablero agile de JavaScript capaz de manejar las tareas de un proyecto y guardarlas.
+        </p>
+
+        <button onclick="AgileBoard('.container', data).create();">Crear Tablero</button>
+        <button onclick="AgileBoard('.container').create();">Recuperar el Tablero anterior</button>
+
+        <div class="container"></div>
+
+        <script type="text/javascript" src="./agileBoard.js"></script>
+        <script type="text/javascript">
+            var data = {
+                project: {
+                    name: "JavaScript",
+                    abbreviature: "JS-COMP"
+                },
+                stages: [
+                    'Backlog',
+                    "Pendientes",
+                    "En Progreso",
+                    "En Pruebas",
+                    "Finalizadas",
+                    "Rechazadas"
+                ],
+                stagesColors: [
+                    'white',
+                    'orange',
+                    "#81abff",
+                    "yellow",
+                    "yellowgreen",
+                    "red"
+                ],
+                tasks: [
+                    {
+                        id: "1",
+                        name: "Teoría", 
+                        description: "Aprender la teoría de JavaScript",
+                        assigned: "Pablo Fernández",
+                        stage: "Finalizadas"
+                    },
+                    {
+                        id: "2",
+                        name: "Componentes", 
+                        description: "Crear tablero Agile",
+                        assigned: "Pablo Fernández",
+                        stage: "En Pruebas"
+                    },
+                    {
+                        id: "3",
+                        name: "Exportación a Jira", 
+                        description: "Crear funcionalidad de exportación a otras herramientas de gestión de tareas como Jira",
+                        assigned: "Pablo Fernández",
+                        stage: "Pendientes"
+                    }
+
+                ]
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <h2>Lector RSS con la API Fetch de JavaScript</h2>
+        </header>
+        <p>
+            Este es un ejemplo de cómo crear un componente que sea capaz de recuperar una fuente RSS y recorrer los datos para mostrarlos en un contenedor, página o aplicación.
+        </p>
+
+        <section id="rss"></section>
+
+        <script type="text/javascript" src="./rss-reader.js"></script>
+        <script type="text/javascript">
+            function insertHTML(html){
+                document.getElementById('rss').innerHTML = html;
+            }
+
+            var rss = new RSS("http://www.islavisual.com/rss", insertHTML);
+            rss.getData();
+
+        </script>
+    </body>
+</html>

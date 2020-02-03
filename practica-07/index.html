@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2>Contador de caracteres para elementos de formulario</h2>
+        </header>
+        <p>
+            Este ejemplo muestra como añadir un control extra a los elementos de HTML que permita contar los caracteres que llevas escritos
+        </p>
+
+        <h2>Resultado</h2>
+        <button onclick="document.getElementById('t1').setCounter()">Habilitar</button>
+        <button onclick="document.getElementById('t1').removeCounter()">Deshabilitar</button>
+        <textarea id="t1" data-metered maxlength="10" rows="4"></textarea>
+        
+        <script type="text/javascript" src="./HTMLElement.js"></script>
+    </body>
+</html>

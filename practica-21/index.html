@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./styles.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2>Widget de tiempo meteorológico</h2>
+        </header>
+        <p>
+            Este es un ejemplo de cómo crear un componente de JavaScript capaz de mostrar la predicción del tiempo allá donde se encuentre el dispositivo que lo ejecuta.
+        </p>
+
+        <div class="wheather">
+            <img data-wheather-property="icon" src="#" />
+            <h2>Vanilla Wheather</h2>
+            <div class="temp">
+                <span data-wheather-property="location"></span>
+                <span data-wheather-property="temperature"></span>
+                <span data-wheather-property="temperatureMin"></span>
+                <span data-wheather-property="temperatureMinTime"></span>
+                <span data-wheather-property="temperatureMax"></span>
+                <span data-wheather-property="temperatureMaxTime"></span>
+                <span data-wheather-property="summary"></span>
+            </div>
+        
+            <div class="info">
+                <span data-wheather-property="precipProbability"></span>
+                <span data-wheather-property="precipIntensity"></span>
+                <span data-wheather-property="pressure"></span>
+                <span data-wheather-property="cloudCover"></span>
+                <span data-wheather-property="uvIndex"></span>
+                <span data-wheather-property="humidity"></span>
+                <span data-wheather-property="sunriseTime"></span>
+                <span data-wheather-property="sunsetTime"></span>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="./widgetWheather.js"></script>
+        <script type="text/javascript">
+            Wheather(".wheather").draw();
+        </script>
+    </body>
+</html>

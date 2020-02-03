@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <h2>Juego de Sudoku</h2>
+        </header>
+        <p>
+            Este es un ejemplo de cómo crear un juego de sudoku con infinitos tableros. Los niveles de dificultad se distinguirán por el número de celdas en blanco.
+        </p>
+
+        <div id="sudoku"></div>
+
+        <script type="text/javascript" src="./chrono.js"></script>        
+        <script type="text/javascript" src="./sudoq.js"></script>
+        <script type="text/javascript">
+            window.onload = function(){
+                new SudoQ("sudoku");
+            }
+        </script>
+    </body>
+</html>

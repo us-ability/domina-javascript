@@ -1,0 +1,67 @@
+* { 
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-variant: small-caps;
+}
+
+.datalist {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    width: 100%; 
+    padding: 15px; 
+    background: white;
+    display: block;
+    box-sizing: border-box;
+}
+.datalist input {
+    width: calc(100% - 60px);
+    border: 1px solid #e8e8e8;
+    line-height: 28px;
+    padding: 0 5px;
+    outline: none;
+}
+.datalist input:hover,
+.datalist input:focus {
+    background: #0060c0;
+    color: #fff;
+}
+.datalist ul {
+    width: calc(100% - 60px);
+    border: 1px solid #e8e8e8;
+    height: auto;
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow: auto;
+    position: relative;
+    left: 59px;
+    top: -1px;
+    box-sizing: border-box;
+}
+.datalist ul li {
+    padding: 5px;
+    color: #000;
+}
+.datalist ul li:nth-child(2n+1){ background: rgba(0,0,0,0.1); }
+.datalist ul li:hover { background: #0060c0; color: #fff; }
