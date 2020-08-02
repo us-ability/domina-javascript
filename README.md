@@ -1,2 +1,2 @@
 # domina-javascript
-Ejemplos / publicaciones del libro Domina JavaScript de la editorial RA-MA
+Ejemplos / publicaciones del libro Domine JavaScript 4ª Edición de la editorial RA-MA
